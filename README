@@ -1,0 +1,60 @@
+Name : Nikita KUnchanwar
+Email id: nkunchan@uncc.edu
+
+
+#######Assignment4  Readme file######
+
+#####python files#####
+1. linreg.py  (Implementation of multiple linear regression)
+2. linreg_gradDesc.py  (Implementation of gradient descent)
+
+
+
+Execution Instructions:
+
+** Steps to run linreg.py 
+
+1. Execute linreg.py file with input folder path where input file is stored as 1st argument using below command in hadoop cluster.
+
+eg.
+spark-submit linreg_bonus.py /user/nkunchan/assign4
+
+
+
+** Steps to run linreg_bonus.py
+
+1. Execute linreg_bonus.py file with input folder path where input file is stored as 1st argument, value of alpha as second argument and no of iterations as 3rd argument using below command in hadoop cluster.
+
+spark-submit <source_code> <input_file> <alpha> <no_of_iterations>
+
+eg.
+spark-submit linreg_bonus.py /user/nkunchan/assign4 0.0001 5
+
+
+
+
+#####output files#####
+1. yxlin.out   : contains outputs of linreg.py and linreg_gradDesc.py  after execuation with input yxlin.csv 
+2. yxlin2.out   : contains outputs of linreg.py and linreg_gradDesc.py  after execuation with input yxlin2.csv 
+
+
+#####Description of gradient descent approach######
+
+1.Assign value of alpha and no of iterations as given in the command line argument
+2.Calculate term (x transpose * (y - (x*beta)))  using map reduce in parallel using entries given in the dataset.
+3.Muliply above calculated term with alpha and add it to beta
+4.use above calculated beta value for next iteration
+5.Repeat step 2 to 4 for the given no of iterations 
+
+
+
+
+
+
+
+
+
+
+
+
+

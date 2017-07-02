@@ -1,0 +1,21 @@
+output of linreg.py
+
+[[ 0.52321075]]
+[[ 2.05475603]]
+
+
+
+output of linreg_gradDec.py
+
+1500 iterations alpha 0.0001
+
+[[ 0.49954185]]
+[[ 1.78667359]]
+
+
+
+
+
+
+
+
